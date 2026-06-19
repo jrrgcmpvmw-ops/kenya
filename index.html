@@ -288,5 +288,31 @@
   
 </main>
 <footer>Kenya Trip 2026 • Nairobi • Kisumu • Masai Mara</footer>
+
+<script>
+window.addEventListener("load", function() {
+    const today = new Date();
+    const month = today.getMonth();
+    const day = today.getDate();
+    let section = "top";
+    if (month === 5) {   // June
+        switch(day) {
+            case 21: section = "day1"; break;
+            case 22: section = "day2"; break;
+            case 23: section = "day3"; break;
+            case 24: section = "day4"; break;
+            case 25: section = "day5"; break;
+            case 26: section = "day6"; break;
+            case 27: section = "day7"; break;
+            case 28: section = "day8"; break;
+            case 29: section = "day9"; break;
+            case 30: section = "day10"; break;
+        }
+    }
+    document.getElementById(section)?.scrollIntoView({
+        behavior: "smooth"
+    });
+});
+  
 </body>
 </html>
